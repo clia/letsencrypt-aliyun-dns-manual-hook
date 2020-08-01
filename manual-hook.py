@@ -43,9 +43,9 @@ def getAliyunDnsInstance():
 
 def auth():
     try:
-        if not os.environ.has_key('CERTBOT_DOMAIN'):
+        if 'CERTBOT_DOMAIN' not in os.environ:
             raise Exception('Environment variable CERTBOT_DOMAIN is empty.')
-        if not os.environ.has_key('CERTBOT_VALIDATION'):
+        if 'CERTBOT_VALIDATION' not in os.environ:
             raise Exception(
                 'Environment variable CERTBOT_VALIDATION is empty.')
 
@@ -76,7 +76,7 @@ def auth():
 
 def cleanup():
     try:
-        if not os.environ.has_key('CERTBOT_DOMAIN'):
+        if 'CERTBOT_DOMAIN' not in os.environ:
             raise Exception('Environment variable CERTBOT_DOMAIN is empty.')
 
         domain = os.environ['CERTBOT_DOMAIN']
