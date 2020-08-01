@@ -70,7 +70,7 @@ def auth():
         logger.info('DNS setting end!')
 
     except Exception as e:
-        logger.error('Error: ' + e + '\n')
+        logger.error('Error: ' + str(e) + '\n')
         sys.exit()
 
 
@@ -95,7 +95,7 @@ def cleanup():
         logger.info('Clean up end!')
 
     except Exception as e:
-        logger.error('Error: ' + e + '\n')
+        logger.error('Error: ' + str(e) + '\n')
         sys.exit()
 
 
@@ -170,7 +170,7 @@ def main(argc, argv):
     except AttributeError as e:
         logger.error(e.args)
     except Exception as e:
-        logger.error('Error: ' + e + '\n')
+        logger.error('Error: ' + str(e) + '\n')
 
         sys.exit()
 
